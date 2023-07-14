@@ -5,9 +5,23 @@ function changeNow() {
     changeColor ();
 }
 
-setInterval (changeColor, delay);
+setInterval(changeColor, delay);
 
  function changeColor() { 
+    switch (document.getElementById('light').className) {
+        case "btn-danger":
+            document.getElementById('light').className = "btn-warning";
+            break;
+        case "btn-warning":
+            document.getElementById('light').className = "btn-success";
+            break;
+        case "btn-succes":
+            document.getElementById('light').className = "btn-danger";
+            break;
+        default:
+            document.getElementById('light').className = "btn-danger";
+    }
+    /*
     if (document.getElementById('light').className == "btn-danger") {
         document.getElementById('light').className = "btn-warning";
         var access = document.getElementById('light').className;
@@ -18,6 +32,7 @@ setInterval (changeColor, delay);
         document.getElementById('light').className = "btn-danger";
         var access = document.getElementById('light').className;
     }
+    */
 }
 
 
