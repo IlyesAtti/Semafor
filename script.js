@@ -7,20 +7,10 @@ function changeNow() {
 
 setInterval(changeColor, delay);
 
- function changeColor() { 
-    switch (document.getElementById('light').className) {
-        case "btn-danger":
-            document.getElementById('light').className = "btn-warning";
-            break;
-        case "btn-warning":
-            document.getElementById('light').className = "btn-success";
-            break;
-        case "btn-succes":
-            document.getElementById('light').className = "btn-danger";
-            break;
-        default:
-            document.getElementById('light').className = "btn-danger";
-    }
+var colors= ["btn-warning", "btn-success", "btn-danger"];
+var clr = 0;
+
+function changeColor() {
+    document.getElementById('light').className = colors[clr];
+    clr = (clr + 1) % colors.length;
 }
-
-
