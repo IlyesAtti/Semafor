@@ -7,8 +7,8 @@ function changeNow() {
 
 setInterval(changeColor, delay);
 
-var colors= ["btn-warning", "btn-success", "btn-danger"];
-var clr = 0;
+let colors= ["btn-warning", "btn-success", "btn-danger"];
+let clr = 0;
 
 function changeColor() {
     document.getElementById('light').className = colors[clr];
